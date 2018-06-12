@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:custom="clr-namespace:ProjetoPrism.Custom;assembly=ProjetoPrism" 
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ProjetoPrism.Views.DetalheUsuario"
+             Title="Detalhes do Usuário">
+    <StackLayout>
+        <Label Text="{Binding UsuarioSelecionado.Nome}"></Label>
+        <Label Text="{Binding UsuarioSelecionado.Sobrenome}"></Label>
+        <Label Text="{Binding UsuarioSelecionado.Matricula}"></Label>
+
+        <custom:CustomCheckBox></custom:CustomCheckBox>
+
+        <Button Text="GPS" Command="{Binding ObterLocalidadeCommand}"></Button>
+        <Label Text="{Binding Localidade}"></Label>
+    </StackLayout>
+  
+</ContentPage>
